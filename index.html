@@ -8,8 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello world</h1>
-    <h2>ready</h2>
-<h3>hey</h3>
+   <h1>Local storage</h1>
+   <h2>signin</h2>
+   <input type="text" id="inputdata">
+   <button type="button" id="buttonsubmit" onclick="btnsubmit()">submit</button><br><br>
+   <hr><h2>login</h2><input type="text" id="inputdata1">
+   <button type="button" id="buttonsubmit1" onclick="btnsubmit1()">submit</button>
+   <br><br>
+   <hr><script>
+    function btnsubmit(){
+        var x =document.getElementById("inputdata").value
+        localStorage.setItem("userData",x)
+    }
+    function btnsubmit1(){
+        var z= localStorage.getItem("userData")
+        var y =document.getElementById("inputdata1").value
+        if(y==z)
+        {
+            alert("login")
+        }
+        else{
+            alert("value mismatch")
+        }
+    }
+   </script>
 </body>
 </html>
