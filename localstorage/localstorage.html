@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="js/bootstrap.min.js" rel="stylesheet">
+
+
+</head>
+<style>
+    .outerdiv {
+        width: 400px;
+        height: 450px;
+        border-radius: 5px;
+    }
+
+    .topheading {
+        font-size: 45px;
+        font-style: italic;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bolder;
+    }
+
+    .inputdata {
+        width: 180px;
+        height: 38px;
+        border-radius: 5px;
+        border: 1.5px solid grey;
+    }
+    .inputlongdata{
+        width: 365px;
+        height: 38px;
+        border-radius: 5px;
+        border: 1.5px solid grey;
+    }
+    .dropdownset{
+        width: 119px;
+        height: 38px;
+        border-radius: 5px;
+        border: 1.5px solid grey;background-color: white;
+        margin: 0%;
+        padding: 0%;
+    }
+    .date, .Gender{
+        font-size: 14px;
+        font-style: italic;
+        text-align: left;
+        padding-top: 1%;
+        padding-left: 1%;
+        font-weight: bold;
+        padding-bottom: 0%;
+        margin: 0%;
+    }
+</style>
+
+<body>
+    <h2 class="text-primary text-center topheading">32Smiles</h2>
+    <div class="container-fluid outerdiv bg-primary text-center">
+        <h4 class="heading text-center pt-2 m-0">Create a New Account </h4>
+        <p class="text-center m-0 p-0">it's quick and easy</p>
+        <hr>
+
+        <input type="text" id="inputuserName" placeholder="First Name" class="inputdata"> 
+        <input type="text"  class="inputdata" id="inputsurName" placeholder="SurName">
+        <input type="password"  class="inputlongdata mt-1" id="inputpassword" placeholder="Password">
+        <input type="email"  class="inputlongdata mt-1" id="inputemail" placeholder="Email">
+        <p class="date">Date of birth:</p>
+        <div class="dropdownlist">
+  <select id="InputDate" class="dropdownset" name= value>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+  </select>
+  <select id="InputMonth" class="dropdownset" name= value>
+    <option value="Jan">Jan</option>
+    <option value="Feb">Feb</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="Aug">Aug</option>
+    <option value="Sep">Sep</option>
+    <option value="Oct">Oct</option>
+    <option value="Nov">Nov</option>
+    <option value="Dec">Dec</option>
+  </select>
+  <select id="InputYear" class="dropdownset" name= value>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="2006">2006</option>
+    <option value="200">2007</option>
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+
+  </select>
+   </div> 
+   <p class="Gender">Gender:</p>
+   <div class="genderdiv">
+    <input type="checkbox" id="Male" name="Male" value="Bike" class="checkbox-round">
+    <label for="Male" class="dropdownlist">Male</label>
+    <input type="checkbox" id="Female" name="Female" value="Car">
+    <label for="Female">Female</label>
+        <input type="checkbox" id="Custom" name="Custom" value="Boat">
+    <label for="Custom">Custom</label>
+   </div>
+
+
+        <button type="button" onclick="btnsignIn()" class="btn btn-primary">SignIn</button><br>
+
+    </div>
+    <div class="container-fluid outerdiv">
+        <h1 class="text-primary">LogIn</h1>
+        <input type="text" id="getuserName">
+        <button type="button" onclick="btnlogIn()" class="btn btn-primary">logIn</button><br>
+    </div>
+    <script>
+        var arraydata = []
+        function btnsignIn() {
+            var InputUserName = document.getElementById("inputuserName").value
+            InputUserNameObj = {
+                name: InputUserName
+            }
+            arraydata.push(InputUserNameObj)
+            console.log(arraydata)
+            localStorage.setItem("Inputusername", JSON.stringify(arraydata))
+
+
+
+
+        }
+
+        function btnlogIn() {
+            var getUserName = document.getElementById("getuserName").value
+            var Getdata = JSON.parse(localStorage.getItem("Inputusername"))
+            var verifyData = Getdata.some(x => x.name === getUserName)
+            if (verifyData) {
+                alert("Login")
+            }
+            else {
+                alert("Create account")
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
