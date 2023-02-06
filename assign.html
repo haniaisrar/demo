@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="localstorage/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <title>Document</title>
     <style>
@@ -15,6 +16,7 @@
             background: white;
             position: absolute;
             top: 45px;
+            top: 56px;
             font-size: 28px;
         
         }
@@ -22,6 +24,7 @@
             background: white;
             position: absolute;
             top: 188px;
+            top: 220px;
             font-size: 28px;
         
         }
@@ -42,12 +45,18 @@
     <form  class="p-3">
         <fieldset class="fieldset p-3 mt-2">
             <span  class="legend1">Student Information</span>
+    <h1 class="text-center m-3">STUDENT MARKSHEET</h1>
+    <!-- <div class="container "> -->
+    <form action="post" class="ms-3">
+        <fieldset class="fieldset p-3 ">
+            <span  class="legend1 ">Student Information</span>
             <table>
                 <tr class="ps-5">
                     <td >Name: </td>
-                    <td class="pe-5"><input type="text" id ="username"></td>
+                    <td class="pe-5"><input name="" type="text" id ="username"></td>
                     <td>Father Name: </td>
                     <td class="pe-5"><input type="text" id ="fathername"></td>
+                    <td class="pe-5"><input name="" type="text" id =" fathername"></td>
 
                 </tr>
                 <tr>
@@ -62,29 +71,32 @@
     </form>
     <form  class="p-3">
         <fieldset class="fieldset p-3 mt-2">
+<!-- </div> -->
+    <form action="" class="p-3">
+        <fieldset class="fieldset p-3 mt-5">
             <span  class="legend2">Subject Marks : </span>
             <table>
                 <tr class="ps-5">
                     <td >Office Automation: </td>
-                    <td class="pe-5"><input type="number" id ="number1"></td>
+                    <td class="pe-5"><input type="number" id ="officenumber1"></td>
                     <td>Out Of 100</td>
 
                 </tr>
                 <tr class="ps-5">
                     <td >Web Desigining : </td>
-                    <td class="pe-5"><input type="number" id ="number2"></td>
+                    <td class="pe-5"><input type="number" id ="webnumber2"></td>
                     <td>Out Of 100</td>
 
                 </tr>
                 <tr class="ps-5">
                     <td >Information technology: </td>
-                    <td class="pe-5"><input type="number" id ="number3"></td>
+                    <td class="pe-5"><input type="number" id ="itnumber3"></td>
                     <td>Out Of 100</td>
 
                 </tr>
                 <tr class="ps-5">
                     <td >C Programming: </td>
-                    <td class="pe-5"><input type="number" id ="number4"></td>
+                    <td class="pe-5"><input type="number" id ="cnumber4"></td>
                     <td>Out Of 100</td>
 
                 </tr>
@@ -92,19 +104,7 @@
         <button id="sumbit" class="button2" type="button" onclick ="btnsubmit()"> Submit</button>
         <button id="cancel" class="button1" onclick ="btncancel()"> Cancel</button>
         </fieldset>
-       
     </form>
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script>
@@ -162,4 +162,34 @@
  }
     </script>
 </body>
+<script>
+var UserArray=[];
+function btnsubmit(){
+        var username = document.getElementById("username").value
+        var fathername = document.getElementById("fathername").value
+        var Institude = document.getElementById("Institude").value
+        var batch = document.getElementById("batch").value
+        var officenumber1 = document.getElementById("officenumber1").value
+        var webnumber2 = document.getElementById("webnumber2").value
+        var itnumber3 = document.getElementById("itnumber3").value
+        var cnumber4 = document.getElementById("cnumber4").value
+        var  userObj = {
+            name : username ,
+            fathername : fathername ,
+            Institudename : Institude ,
+            batchno : batch ,
+            OfficeAUTOMATION: officenumber1 ,
+            web_DESIGN : webnumber2 ,
+            IT : itnumber3 ,
+            C: cnumber4
+        }
+        UserArray.push(userObj);
+        console.log(UserArray)
+        localStorage.setItem("userinformation",JSON.stringify(UserArray));
+
+        // alert(username)
+        '<table border=1>'+'</table>'      
+    
+     }
+        </script>
 </html>
