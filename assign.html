@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="localstorage/css/bootstrap.min.css">
 
     <title>Document</title>
     <style>
@@ -14,54 +14,54 @@
         .legend1{
             background: white;
             position: absolute;
-            top: 95px;
+            top: 45px;
             font-size: 28px;
         
         }
         .legend2{
             background: white;
             position: absolute;
-            top: 276px;
+            top: 188px;
             font-size: 28px;
         
         }
         .button1{
             position: absolute;
             right: 30px;
-            top: 366px;
+            top: 336px;
         }
         .button2{
             position: absolute;
             right: 109px;
-            top: 366px;
+            top: 336px;
         }
     </style>
 </head>
 <body>
     <h1 class="text-center">STUDENT MARKSHEET</h1>
-    <form action="post" class="p-3">
-        <fieldset class="fieldset p-3 mt-5">
+    <form  class="p-3">
+        <fieldset class="fieldset p-3 mt-2">
             <span  class="legend1">Student Information</span>
             <table>
                 <tr class="ps-5">
                     <td >Name: </td>
                     <td class="pe-5"><input type="text" id ="username"></td>
                     <td>Father Name: </td>
-                    <td class="pe-5"><input type="text" id =" fathername"></td>
+                    <td class="pe-5"><input type="text" id ="fathername"></td>
 
                 </tr>
                 <tr>
                     <td>Institude Name: </td>
                     <td><input type="text" id ="Institude"></td>
                     <td>Batch Name: </td>
-                    <td ><input type="text" id =" batch"></td>
+                    <td ><input type="text" id ="batch"></td>
 
                 </tr>
             </table>
         </fieldset>
     </form>
-    <form action="post" class="p-3">
-        <fieldset class="fieldset p-3 mt-5">
+    <form  class="p-3">
+        <fieldset class="fieldset p-3 mt-2">
             <span  class="legend2">Subject Marks : </span>
             <table>
                 <tr class="ps-5">
@@ -89,7 +89,7 @@
 
                 </tr>
             </table>
-        <button id="sumbit" class="button2" onclick ="btnsubmit()"> Submit</button>
+        <button id="sumbit" class="button2" type="button" onclick ="btnsubmit()"> Submit</button>
         <button id="cancel" class="button1" onclick ="btncancel()"> Cancel</button>
         </fieldset>
        
@@ -108,19 +108,56 @@
 
 
     <script>
+        
+        function btncancel(){
+            document.getElementById("username").innerHTML="";
+            document.getElementById("fathername").innerHTML="";
+            document.getElementById("Institude").innerHTML="";
+            document.getElementById("batch").innerHTML="";
+            document.getElementById("number1").innerHTML="";
+            document.getElementById("number2").innerHTML="";
+            document.getElementById("number3").innerHTML="";
+            document.getElementById("number4").innerHTML="";
+
+
+
+        }
+        var UserArray = [];
+        var Id = 0 ;
  function btnsubmit(){
-    '<table border'=
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   
+    var username = document.getElementById("username").value;
+    var fathername = document.getElementById("fathername").value;
+    var institude_name = document.getElementById("Institude").value;
+    var batch_code = document.getElementById("batch").value;
+    var office = document.getElementById("number1").value;
+    var Web_design = document.getElementById("number2").value;
+    var it =document.getElementById("number3").value;
+    var Programming = document.getElementById("number4").value;
+    // UserArray = JSON.parse(localStorage.getItem("userdata"));
+
+    var Userobj = {
+        Id: Id,
+        name: username,
+        Father_name: fathername,
+        institude_name: Institude,
+        Batch_code: batch,
+        office : number1,
+        web_design: number2,
+        it: number3,
+        Programming: number4
+    }
+    UserArray.push(Userobj);
+    // console.log(UserArray);
+    console.log(UserArray.lenght);
+
+
+    debugger
+//     var uid = ancestor.index(element); // uid = 0 
+//    localStorage.setItem(namespace + uid, JSON.stringify(UserArray));
+    localStorage.setItem("userdata",JSON.stringify(UserArray));
+    Id++;
+      window.location.href = "ASSIGN2.HTML";
 
  }
     </script>

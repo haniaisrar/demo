@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="localstorage/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .tabledesign{
+            border: 2px solid black;
+            /* padding: 20px; */
+            width: 700px;
+           /* align-items: center; */
+           justify-content: center;
+        
+           
+        }
+    </style>
+</head>
+<body>
+   
+            <table class=" tabledesign table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th colspan="2"class ="text-center fs-1">Student Information</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Name:</td>
+                    <td><input type="text" id =" fathername"></td>
+        
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Father Name:</td>
+                    <td class="pe-5"><input type="text" id =" fathername"></td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Institude Name: </td>
+                    <td><input type="text" id ="Institude"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Batch Name: </td>
+                    <td ><input type="text" id =" batch"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td >Office Automation: </td>
+                    <td class="pe-5"><input type="number" id ="number1"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td >Web Desigining : </td>
+                    <td class="pe-5"><input type="number" id ="number2"></td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td >Information technology: </td>
+                    <td class="pe-5"><input type="number" id ="number3"></td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td >C Programming: </td>
+                    <td class="pe-5"><input type="number" id ="number4"></td>
+                  </tr>
+                </tbody>
+              </table>
+                <!-- <table >
+                <tr class="text-center"><td colspan="2" ></td>Student Information</tr>
+                <tr class="ps-5">
+                    <td >Name: </td>
+                    <td class="pe-5"><input type="text" id ="username"></td>
+                </tr>
+                <tr class="ps-5">
+                    <td>Father Name: </td>
+                    <td class="pe-5"><input type="text" id =" fathername"></td>
+                </tr>
+                <tr class="ps-5">
+                    <td>Institude Name: </td>
+                    <td><input type="text" id ="Institude"></td>
+                </tr>
+                <tr class="ps-5">
+                    <td>Batch Name: </td>
+                    <td ><input type="text" id =" batch"></td>
+                </tr>
+                <tr class="ps-5">
+                    <td >Office Automation: </td>
+                    <td class="pe-5"><input type="number" id ="number1"></td>
+                    
+
+                </tr>
+                <tr class="ps-5">
+                    <td >Web Desigining : </td>
+                    <td class="pe-5"><input type="number" id ="number2"></td>
+
+                </tr>
+                <tr class="ps-5">
+                    <td >Information technology: </td>
+                    <td class="pe-5"><input type="number" id ="number3"></td>
+
+                </tr>
+                <tr class="ps-5">
+                    <td >C Programming: </td>
+                    <td class="pe-5"><input type="number" id ="number4"></td>
+
+                </tr>
+            </table> -->
+    
+    <script>
+var  UserArray = JSON.parse(localStorage.getItem("userdata"));
+console.log(UserArray)
+
+    </script>
+</body>
+</html>
